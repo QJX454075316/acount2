@@ -19,16 +19,45 @@ public interface UserDao {
      */
     int insert(User record);
 
-
+    /**
+     * 动态新建用户
+     * @param record 需要添加的
+     * @return 影响的行数
+     */
     int insertSelective(User record);
 
+    /**
+     * 根据id查找用户
+     * @param id
+     * @return 返回用户对象
+     */
     User selectByPrimaryKey(Long id);
 
+    /**
+     * 动态更新用户的属性
+     * @param record
+     * @return 影响的行数
+     */
     int updateByPrimaryKeySelective(User record);
 
+    /**
+     * 更新用户信息
+     * @param record
+     * @return 影响的行数
+     */
     int updateByPrimaryKey(User record);
 
+    /**
+     * 根据用户名查找的用户
+     * @param user
+     * @return 返回用户对象
+     */
     User userLogin(User user);
 
+    /**
+     * 根据用户名查找用户
+     * @param username
+     * @return 不存在返回0 存在返回1
+     */
     int selectByUsername(String username);
 }

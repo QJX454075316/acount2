@@ -12,6 +12,11 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Controller
 @RequestMapping("index")
+/**
+ * 公共controller提供公共功能的接口
+ * @author junxiangquan
+ *
+ */
 public class CommonController {
 
     @Autowired
