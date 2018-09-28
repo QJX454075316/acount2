@@ -1,0 +1,89 @@
+#mybatis:
+#  typeAliasesPackage: com.qjx.account.entity
+#  mapperLocations: classpath:mapper/*.xml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.qjx.acount.entry
+  #打印sql的配置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#配置端口号
+server:
+  port: 8080
+
+
+# 默认的profile为dev，其他环境通过指定启动参数使用不同的profile，比如：
+#   测试环境：java -jar my-spring-boot.jar --spring.profiles.active=test
+#   生产环境：java -jar my-spring-boot.jar --spring.profiles.active=prod
+#spring:
+#  profiles:
+#    active: dev
+#
+#---
+# 开发环境配置
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/my?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 199511
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+#---
+## 测试环境配置
+#spring:
+#  profiles: test
+#mysql:
+#  ipPort: 192.168.0.12:8066
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/my
+#      username: root
+#      password: 199511
+#      driver-class-name: com.mysql.jdbc.Driver
+#      # 使用druid数据源
+#      type: com.alibaba.druid.pool.DruidDataSource
+#    redis:
+#      port: 6379
+#      host: 192.168.1.150
+#      password: p5nqm2xc
+#
+#---
+## 生产环境配置
+#spring:
+#  profiles: prod
+#mysql:
+#  ipPort: 192.168.0.13:8066
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/my
+#      username: root
+#      password: 199511
+#      driver-class-name: com.mysql.jdbc.Driver
+#      # 使用druid数据源
+#      type: com.alibaba.druid.pool.DruidDataSource
+#  redis:
+#    port: 6379
+#    host: 192.168.1.150
+#    password: p5nqm2xc
+
+
+logging:
+  config: classpath:log4j2-spring.xml
