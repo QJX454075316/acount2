@@ -61,6 +61,5 @@ public class CommonController {
             model.addObject("msg","注册失败!");
         }
         return model;
-
     }
 }
