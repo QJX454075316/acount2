@@ -4,6 +4,10 @@ import com.qjx.acount.entry.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
+/**
+ *
+ * @author jucxiangquan
+ */
 public interface UserDao {
     /**
      *  删除用户
