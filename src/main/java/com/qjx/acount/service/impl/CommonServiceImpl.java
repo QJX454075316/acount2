@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * Demo class
  *
  * @author junxiangquan
- * @date 2018/9/62
+ * @date 2018/9/26
  */
 @Service
 public class CommonServiceImpl implements CommonService {
