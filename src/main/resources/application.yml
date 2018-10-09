@@ -86,4 +86,4 @@ spring:
 
 
 logging:
-  config: classpath:log4j2-spring.xml
+  config: classpath:log4j2-spring.yml
