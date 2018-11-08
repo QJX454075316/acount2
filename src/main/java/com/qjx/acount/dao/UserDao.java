@@ -3,6 +3,8 @@ package com.qjx.acount.dao;
 import com.qjx.acount.entry.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 /**
  *
@@ -64,4 +66,10 @@ public interface UserDao {
      * @return 不存在返回0 存在返回1
      */
     int selectByUsername(String username);
+
+    /**
+     * 获取全部用户
+     * @return
+     */
+    List<User> selectAlluser();
 }

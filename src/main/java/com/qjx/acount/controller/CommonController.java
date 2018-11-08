@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("index")
 /**
@@ -67,4 +69,25 @@ public class CommonController {
         }
         return model;
     }
+
+    @RequestMapping("/thymeleaf")
+    public String testThymeleaf(Map<String,Object> map) {
+        map.put("msg", "Hello Thymeleaf");
+
+        map.put("userList", commonService.getUserList());
+
+        return "test_thymeleaf";
+    }
+
+    @RequestMapping("/freemaker")
+    public String testFreemaker(Map<String,Object> map) {
+        map.put("msg", "Hello freemarker!");
+        return "test_freemarker";
+    }
+
+    @RequestMapping("/index")
+    public String index() {
+        return "test_sidebar";
+    }
+
 }

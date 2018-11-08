@@ -11,7 +11,7 @@ mybatis:
 
 #配置端口号
 server:
-  port: 8080
+  port: 8090
 
 
 # 默认的profile为dev，其他环境通过指定启动参数使用不同的profile，比如：

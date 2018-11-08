@@ -7,6 +7,8 @@ import com.qjx.acount.utils.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Demo class
  *
@@ -39,6 +41,11 @@ public class CommonServiceImpl implements CommonService {
     public int usernameIsExist(String username) {
         int result = userDao.selectByUsername(username);
         return  result;
+    }
+
+    @Override
+    public List<User> getUserList() {
+       return userDao.selectAlluser();
     }
 
 

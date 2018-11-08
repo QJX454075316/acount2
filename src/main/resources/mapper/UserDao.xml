@@ -99,4 +99,8 @@
   <select id="selectByUsername" resultType="java.lang.Integer">
       SELECT COUNT(id) FROM `user` WHERE username = #{username,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectAlluser" resultType="java.util.List">
+    SELECT <include refid="Base_Column_List"></include> FROM ` acount`
+  </select>
 </mapper>

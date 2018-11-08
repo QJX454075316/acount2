@@ -1,6 +1,9 @@
 package com.qjx.acount.service;
 
 import com.qjx.acount.entry.User;
+
+import java.util.List;
+
 /**
  * 公共接口
  *
@@ -30,4 +33,10 @@ public interface CommonService {
      * @return 不存在返回0 否则不存在
      */
     int usernameIsExist(String username);
+
+    /**
+     * 获取用户列表
+     * @return 用户列表
+     */
+    List<User> getUserList();
 }
