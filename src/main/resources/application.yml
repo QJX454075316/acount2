@@ -46,6 +46,10 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+  thymeleaf:
+    mode: LEGACYHTML5
+
+
 
 
 #---

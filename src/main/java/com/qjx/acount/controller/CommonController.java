@@ -32,10 +32,10 @@ public class CommonController {
         if(user!=null){
             model.addObject("data",user);
             model.addObject("code",200);
-            model.addObject("msg","登录成功!");
+            model.addObject("msg","登录成功哈哈!");
         }else{
             model.addObject("code",400);
-            model.addObject("msg","账号或密码不正确!");
+            model.addObject("msg","账号或密码不正确哈!");
         }
         return model;
     }
@@ -62,7 +62,7 @@ public class CommonController {
         if(result==1){
             model.addObject("data",user);
             model.addObject("code",200);
-            model.addObject("msg","注册成功!");
+            model.addObject("msg","注册成功    发啊二!");
         }else{
             model.addObject("code",400);
             model.addObject("msg","注册失败!");

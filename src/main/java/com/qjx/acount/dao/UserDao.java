@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+@SuppressWarnings("ALL")
 @Mapper
 /**
  *
@@ -67,9 +68,10 @@ public interface UserDao {
      */
     int selectByUsername(String username);
 
+
     /**
-     * 获取全部用户
-     * @return
+     * 查询用户
+     * @return 返回所有的用户
      */
-    List<User> selectAlluser();
+    List<User> selectAllUser();
 }
