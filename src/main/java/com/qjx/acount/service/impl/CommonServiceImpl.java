@@ -45,7 +45,7 @@ public class CommonServiceImpl implements CommonService {
 
     @Override
     public List<User> getUserList() {
-       return userDao.selectAlluser();
+       return userDao.selectAllUser();
     }
 
 
