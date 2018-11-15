@@ -100,7 +100,7 @@
       SELECT COUNT(id) FROM `user` WHERE username = #{username,jdbcType=VARCHAR}
   </select>
 
-  <select id="selectAlluser" resultType="java.util.List">
-    SELECT <include refid="Base_Column_List"></include> FROM ` acount`
+  <select id="selectAllUser" resultType="com.qjx.acount.entry.User">
+    SELECT <include refid="Base_Column_List"></include> FROM user
   </select>
 </mapper>
