@@ -48,5 +48,4 @@ public class CommonServiceImpl implements CommonService {
        return userDao.selectAllUser();
     }
 
-
 }

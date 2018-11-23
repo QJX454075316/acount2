@@ -70,12 +70,11 @@ public class CommonController {
         return model;
     }
 
-    @RequestMapping("/thymeleaf")
+    
+    /*@RequestMapping("/thymeleaf")
     public String testThymeleaf(Map<String,Object> map) {
         map.put("msg", "Hello Thymeleaf");
-
         map.put("userList", commonService.getUserList());
-
         return "test_thymeleaf";
     }
 
@@ -88,6 +87,6 @@ public class CommonController {
     @RequestMapping("/index")
     public String index() {
         return "test_sidebar";
-    }
+    }*/
 
 }
